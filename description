@@ -1,0 +1,265 @@
+
+# HTML Tables - Complete Guide
+
+## Introduction
+
+HTML tables are used to display data in **rows and columns**.
+They are useful for presenting structured information such as **student records, product lists, schedules, pricing tables, and reports**.
+
+A table in HTML is created using the `<table>` tag along with rows (`<tr>`) and cells (`<th>` and `<td>`).
+
+---
+
+# Basic Table Structure
+
+```html
+<table>
+  <tr>
+    <th>Heading 1</th>
+    <th>Heading 2</th>
+  </tr>
+
+  <tr>
+    <td>Data 1</td>
+    <td>Data 2</td>
+  </tr>
+</table>
+```
+
+---
+
+# Important HTML Table Tags
+
+| Tag       | Meaning      | Purpose               |
+| --------- | ------------ | --------------------- |
+| `<table>` | Table        | Creates the table     |
+| `<tr>`    | Table Row    | Creates a row         |
+| `<th>`    | Table Header | Creates a header cell |
+| `<td>`    | Table Data   | Creates a data cell   |
+
+---
+
+# Simple Table Example
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<title>Table Example</title>
+</head>
+
+<body>
+
+<table border="1">
+  <tr>
+    <th>Name</th>
+    <th>Age</th>
+    <th>City</th>
+  </tr>
+
+  <tr>
+    <td>Navya</td>
+    <td>24</td>
+    <td>Rajahmundry</td>
+  </tr>
+
+  <tr>
+    <td>Rahul</td>
+    <td>23</td>
+    <td>Hyderabad</td>
+  </tr>
+
+</table>
+
+</body>
+</html>
+```
+
+---
+
+# Table Attributes
+
+## Border
+
+Adds a border around the table.
+
+```html
+<table border="1">
+```
+
+---
+
+## Cell Padding
+
+Adds space inside table cells.
+
+```html
+<table border="1" cellpadding="10">
+```
+
+---
+
+## Cell Spacing
+
+Adds space between table cells.
+
+```html
+<table border="1" cellspacing="5">
+```
+
+---
+
+# Colspan (Merge Columns)
+
+The `colspan` attribute merges multiple columns into a single column.
+
+```html
+<table border="1">
+<tr>
+<th colspan="2">Student Info</th>
+</tr>
+
+<tr>
+<td>Name</td>
+<td>Navya</td>
+</tr>
+</table>
+```
+
+---
+
+# Rowspan (Merge Rows)
+
+The `rowspan` attribute merges multiple rows.
+
+```html
+<table border="1">
+<tr>
+<th rowspan="2">Name</th>
+<td>Navya</td>
+</tr>
+
+<tr>
+<td>Rahul</td>
+</tr>
+</table>
+```
+
+---
+
+# Table Sections
+
+HTML tables can be divided into three sections.
+
+| Tag       | Purpose      |
+| --------- | ------------ |
+| `<thead>` | Table header |
+| `<tbody>` | Table body   |
+| `<tfoot>` | Table footer |
+
+Example:
+
+```html
+<table border="1">
+
+<thead>
+<tr>
+<th>Name</th>
+<th>Marks</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Navya</td>
+<td>90</td>
+</tr>
+</tbody>
+
+<tfoot>
+<tr>
+<td>Total</td>
+<td>90</td>
+</tr>
+</tfoot>
+
+</table>
+```
+
+---
+
+# Styling Tables with CSS
+
+```html
+<style>
+table {
+  border-collapse: collapse;
+  width: 50%;
+}
+
+th, td {
+  border: 1px solid black;
+  padding: 10px;
+  text-align: center;
+}
+
+th {
+  background-color: lightgray;
+}
+</style>
+```
+
+---
+
+# Example: Product Table
+
+```html
+<table>
+<tr>
+<th>Product</th>
+<th>Price</th>
+<th>Quantity</th>
+</tr>
+
+<tr>
+<td>Cake</td>
+<td>₹500</td>
+<td>2</td>
+</tr>
+
+<tr>
+<td>Donut</td>
+<td>₹100</td>
+<td>5</td>
+</tr>
+</table>
+```
+
+---
+
+# Real World Uses of Tables
+
+HTML tables are commonly used for:
+
+* Student records
+* Product listings
+* Timetables
+* Pricing tables
+* Scoreboards
+* Financial reports
+
+---
+
+# Important Note
+
+Tables should be used **only for displaying tabular data**.
+
+Do **NOT** use tables for webpage layout.
+Modern layouts are created using **CSS Flexbox or CSS Grid**.
+
+---
+
+# Conclusion
+
+HTML tables are an essential concept for displaying structured data on webpages.
+Understanding table tags, attributes, and styling helps create clean and organized data presentation.
